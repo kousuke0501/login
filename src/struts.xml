@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<constant name="struts.devMode" value="true"/>
+<!-- Struts2の挙動を制御する設定 -->
+<!-- name:設定名　value:設定値 -->
+<package name="com.internousdev.login.action" extends="struts-default">
+<!-- Actionファイルのパッケージ名を指定 -->
+
+<action name="LoginAction" class="com.internousdev.login.action.LoginAction" method="execute">
+<!-- プロジェクトで使うアクションファイルの指定 -->
+	<result name="success">loginSuccess.jsp</result>
+	<!-- methodからSUCCESSが返されたら指定したjpsファイルに遷移 -->
+	<result name="error">loginError.jsp</result>
+	<!-- methodからERRORが返されたら指定したjpsファイルに遷移 -->
+</action>
+
+</package>
+</struts>
